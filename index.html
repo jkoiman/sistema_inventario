@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Inventario de Tienda</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f4f7f3">
+	<title>Inventario de tienda</title>
+	<link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+	<header class="topbar">
+		<p>GESTIÓN DE TIENDA</p>
+		<h1>Sistema de inventario</h1>
+	</header>
 
-<h1>Sistema de Inventario</h1>
+	<main>
+		<div class="layout">
+			<section class="panel" aria-labelledby="form-title">
+				<h2 id="form-title">Registrar producto</h2>
+				<form id="product-form">
+					<label for="product-name">Nombre del producto</label>
+					<input id="product-name" name="name" type="text" maxlength="80" placeholder="Ej. Teclado inalámbrico" required>
 
+<<<<<<< HEAD
 <h2>Registro de clientes</h2>
 
 <form id="formulario-cliente">
@@ -51,38 +66,37 @@
 </table>
 
 <h2>Registro de productos</h2>
+=======
+					<label for="product-quantity">Cantidad</label>
+					<input id="product-quantity" name="quantity" type="number" min="1" step="1" placeholder="0" required>
+>>>>>>> origin/brayan
 
-<label>Nombre del producto:</label>
-<input type="text">
+					<button class="submit-button" type="submit">Agregar al inventario</button>
+					<p class="message" id="form-message" role="status" aria-live="polite"></p>
+				</form>
+			</section>
 
-<br><br>
-
-<label>Cantidad:</label>
-<input type="number">
-
-<br><br>
-
-<button>Registrar producto</button>
-
-<h2>Listado de productos</h2>
-
-<table border="1">
-<tr>
-<th>Producto</th>
-<th>Cantidad</th>
-</tr>
-
-<tr>
-<td>Computador</td>
-<td>10</td>
-</tr>
-
-<tr>
-<td>Mouse</td>
-<td>20</td>
-</tr>
-</table>
-
+<<<<<<< HEAD
 <script src="clientes.js" defer></script>
+=======
+			<section class="panel" aria-labelledby="list-title">
+				<div class="list-heading">
+					<h2 id="list-title">Productos registrados</h2>
+					<span class="count" id="product-count"></span>
+				</div>
+				<div class="table-wrap">
+					<table>
+						<thead>
+							<tr><th scope="col">Producto</th><th scope="col">Cantidad</th><th scope="col"><span class="visually-hidden">Acciones</span></th></tr>
+						</thead>
+						<tbody id="product-list"></tbody>
+					</table>
+					<p class="empty-state" id="empty-state" hidden>No hay productos registrados.</p>
+				</div>
+			</section>
+		</div>
+	</main>
+	<script src="productos.js" defer></script>
+>>>>>>> origin/brayan
 </body>
 </html>
